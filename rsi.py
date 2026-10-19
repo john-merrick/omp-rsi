@@ -9,8 +9,8 @@ import tempfile
 from pathlib import Path
 
 
-def execute(args, cwd, timeout):
-    process = subprocess.Popen(args, cwd=cwd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+def execute(args, cwd, timeout, env=None):
+    process = subprocess.Popen(args, cwd=cwd, env=env, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                                text=True, start_new_session=True)
     try:
         stdout, _ = process.communicate(timeout=timeout)

@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "models": {
+    "simple": [
+      "openai-codex/gpt-6-luna",
+      "openai-codex/gpt-6-sol"
+    ],
+    "standard": [
+      "openai-codex/gpt-6-sol"
+    ],
+    "complex": [
+      "openai-codex/gpt-6-astra",
+      "openai-codex/gpt-6-sol"
+    ]
+  },
+  "thresholds": {
+    "longPromptChars": 1200,
+    "simpleMaxChars": 700
+  }
+}
